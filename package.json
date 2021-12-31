@@ -5,7 +5,8 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy", "npm run build && gh-pages -d dist -b master",
+    "deploy": "hexo deploy", 
+	"deploy": "npm run build && gh-pages -d dist -b master",
     "server": "hexo server"
   },
   "hexo": {
