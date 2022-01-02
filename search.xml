@@ -4,8 +4,8 @@
     <title>3.0 kWh Solar Generator</title>
     <url>/2022/01/01/3-0-kWh-Solar-Generator/</url>
     <content><![CDATA[<p>This project was completed at the beginning of 2021. It took around 40 hours over a few months.</p>
-<p>Most of this project is based off of <a href="https://youtu.be/PVnQ87Fvsk4">LithiumSolar&#39;s video</a></p>
-<p>I sourced recycled 2200 mAh modem cells from <a href="batteryhookup.com">batteryhookup.com</a>. It&#39;s tough to find used 2600 mAh cells, I do have some, but not the 364 required for this project. I ended up being a little less than 3.0 kWh after testing all the cells.</p>
+<p>Most of this project is based off of <a href="https://youtu.be/PVnQ87Fvsk4">LithiumSolar&#39;s video</a>.</p>
+<p>I sourced recycled 2200 mAh modem cells from <a href="batteryhookup.com">batteryhookup.com</a>. It&#39;s tough to find used 2600 mAh cells, I do have some, but not the 364 required for this project. I ended up being a little less than 3.0 kWh after testing all cells.</p>
 <table>
 <thead>
 <tr>
@@ -30,8 +30,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<img src="/2022/01/01/3-0-kWh-Solar-Generator/9.jpg" class="">
-]]></content>
+<img src="/2022/01/01/3-0-kWh-Solar-Generator/9.jpg" class="">]]></content>
       <tags>
         <tag>solar</tag>
         <tag>18650s</tag>
@@ -41,7 +40,7 @@
   <entry>
     <title>CO2 Monitor</title>
     <url>/2022/01/02/CO2-Monitor/</url>
-    <content><![CDATA[<p>Project based off of <a href="https://makezine.com/fresh-air/">Makezine article/post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 page</a>.</p>
+    <content><![CDATA[<p>This project is based off of <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
 <p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy/sleepy and therefore not able to learn as well.</p>
 <p>One interesting discovery was how high CO2 levels get in a short drive with windows up. My car (Nissan Sentra) approached 2000 PPM in a one person 30 minute commute. Having one window down @55 MPH (90 KPH) for a minute brought the levels back to below 1000 PPM.</p>
 <img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
