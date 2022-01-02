@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>CO2 Monitor</title>
+    <url>/2022/01/02/CO2-Monitor/</url>
+    <content><![CDATA[<p>Project based off of <a href="https://makezine.com/fresh-air/">Makezine article/post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 page</a>. </p>
+<p>All lot of interest in CO2 for makers was inspired when a school teacher built a CO2 monitor for a classroom and found that the CO2 levels at the end of class were enough to make you groggy/sleepy and not able to learn as well.</p>
+<p>One interesting thing I found was how high CO2 levels get in a short driver with windows up. My car (Nissan Sentra) approached 2000 PPM in a 30 minute commute with one person. Having one window down for a minute brought the levels back to below 1000 PPM. </p>
+<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
+]]></content>
+      <tags>
+        <tag>sensors</tag>
+        <tag>co2</tag>
+        <tag>microcontrollers</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3.0 kWh Solar Generator</title>
+    <url>/2022/01/01/3-0-kWh-Solar-Generator/</url>
+    <content><![CDATA[<p>This project was completed at the beginning of 2021. It probably took 40 hours over a few months. </p>
+<p>Most of this project is based off of <a href="https://youtu.be/PVnQ87Fvsk4">LithiumSolar&#39;s video</a></p>
+<p>I sourced recycled 2200 mAh modem cells from <a href="batteryhookup.com">batteryhookup.com</a>. It&#39;s tough to find used 2600 mAh cells, I do have some, but not the 364 required for this project. I ended up being a little less than 3.0 kWh after testing all the cells.</p>
+<table>
+<thead>
+<tr>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/1.jpg" class=""></th>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/2.jpg" class=""></th>
+<th></th>
+</tr>
+</thead>
+</table>
+<p>Ended up using kWeld to spot weld. Also sourced 4P nickel strip to simplify.</p>
+<table>
+<thead>
+<tr>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/4.jpg" class=""></th>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/5.jpg" class=""></th>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/6.jpg" class=""></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/2022/01/01/3-0-kWh-Solar-Generator/7.jpg" class=""></td>
+<td><img src="/2022/01/01/3-0-kWh-Solar-Generator/8.jpg" class=""></td>
+<td></td>
+</tr>
+</tbody></table>
+<img src="/2022/01/01/3-0-kWh-Solar-Generator/9.jpg" class="">
+]]></content>
+      <tags>
+        <tag>solar</tag>
+        <tag>18650</tag>
+        <tag>bms</tag>
+      </tags>
+  </entry>
+</search>
