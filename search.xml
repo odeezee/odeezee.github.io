@@ -38,9 +38,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Build Inkbird PID Kit from Amazon</title>
+    <url>/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/</url>
+    <content><![CDATA[<p>Purchased <a href="https://www.amazon.com/gp/product/B08Y8GX1WT">this Amazon kit</a> to control the temperature of a  1500 watt smoker. I&#39;ve tried other off the shelf controllers but the max temperature is too low and it&#39;s not easy to adjust the temperature.</p>
+<p>Here is a link to <a href="https://www.thingiverse.com/thing:5647742">the chassis model</a>.</p>
+<iframe width="480" height="240" src="https://www.youtube.com/embed/m8Bwifxe91g" title="Amazon Inkbird PID Kit Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
+      <tags>
+        <tag>pid</tag>
+        <tag>sensors</tag>
+        <tag>temperature</tag>
+        <tag>fusion360</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Learn 3D Modeling for Drone Build</title>
     <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
-    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the cost of the project and still there aren&#39;t reliable&#x2F;customizable solutions for small and quick electronics projects that need a case. I have been using 3D printing to get roughly what I want but the time modeling would span hours and still felt like I wasn&#39;t using Fusion 360 to its full potential.</p>
+    <content><![CDATA[<p>A few projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. FDM printing has been used to get roughly what is desired but the time modeling span hours and all of the features of Fusion 360 haven&#39;t been properly utilized.</p>
 <p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
 <p><u>Issues that cropped up during this project:</u><ol></p>
 <li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
