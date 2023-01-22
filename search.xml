@@ -38,6 +38,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Learn 3D Modeling for Drone Build</title>
+    <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
+    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. I&#39;ve used FDM printing to get roughly what I need but the time modeling span hours and I don’t feel like I’m using Fusion 360 to its full potential.</p>
+<p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
+<p><u>Issues that cropped up during this project:</u><ol></p>
+<li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
+<li>The model is too large for a typical 3d printer to print so it had to be broken into several parts (see Fusion snip below)</li>
+<li>Nylon is not a very good material for drone frames. It flexes a lot and is heavy relative to strength. The frame flexing also makes it more difficult for the flight controller to assign thrust</li>
+<li>The component tray model could not fit two 4S LiPos so it was redesigned</li></ol>
+
+<img src="/2022/11/21/Learn-Drone-Building-and-3D-Modeling/fusion360model.jpg" class="">
+
+<p>It ended up flying. I think a voltage drop ended up crashing the flight controller making it unresponsive to remote control and the drone started drifting to the unknown. Luckily it hit a power line and I was able to recover it.<iframe width="480" height="240" src="https://www.youtube.com/embed/XV6d9KvX41s" title="Drone First Flight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+]]></content>
+      <tags>
+        <tag>coursera</tag>
+        <tag>fusion360</tag>
+        <tag>lipos</tag>
+        <tag>drone</tag>
+        <tag>3dmodeling</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Build Inkbird PID Kit from Amazon</title>
     <url>/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/</url>
     <content><![CDATA[<p>Purchased <a href="https://www.amazon.com/gp/product/B08Y8GX1WT">this Amazon kit</a> to control the temperature of a  1500 watt smoker. I&#39;ve tried other off the shelf controllers but the max temperature is too low and it&#39;s not easy to adjust the temperature.</p>
@@ -46,10 +69,10 @@
 
 <iframe width="480" height="240" src="https://www.youtube.com/embed/m8Bwifxe91g" title="Amazon Inkbird PID Kit Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
       <tags>
+        <tag>fusion360</tag>
         <tag>pid</tag>
         <tag>sensors</tag>
         <tag>temperature</tag>
-        <tag>fusion360</tag>
       </tags>
   </entry>
   <entry>
@@ -64,29 +87,6 @@
         <tag>sensors</tag>
         <tag>co2</tag>
         <tag>microcontrollers</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Learn 3D Modeling for Drone Build</title>
-    <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
-    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. I’ve used FDM printing to get roughly what I need but the time modeling span hours and I don’t feel like I’m using Fusion 360 to its full potential.</p>
-<p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
-<p><u>Issues that cropped up during this project:</u><ol></p>
-<li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
-<li>The model is too large for a typical 3d printer to print so it had to be broken into several parts (see Fusion snip below)</li>
-<li>Nylon is not a very good material for drone frames. It flexes a lot and is heavy relative to strength. The frame flexing also makes it more difficult for the flight controller to assign thrust</li>
-<li>The component tray model could not fit two 4S LiPos so it was redesigned</li></ol>
-
-<img src="/2022/11/21/Learn-Drone-Building-and-3D-Modeling/fusion360model.jpg" class="">
-
-<p>It ended up flying. I think a voltage drop ended up crashing the flight controller making it unresponsive to remote control and the drone started drifting to the unknown. Luckily it hit a power line and I was able to recover it.<iframe width="480" height="240" src="https://www.youtube.com/embed/XV6d9KvX41s" title="Drone First Flight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-]]></content>
-      <tags>
-        <tag>fusion360</tag>
-        <tag>coursera</tag>
-        <tag>lipos</tag>
-        <tag>drone</tag>
-        <tag>3dmodeling</tag>
       </tags>
   </entry>
 </search>
