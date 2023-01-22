@@ -53,9 +53,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Monitoring CO2 Levels in Apartment or Car</title>
+    <url>/2022/01/02/CO2-Monitor/</url>
+    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
+<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
+<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
+<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
+]]></content>
+      <tags>
+        <tag>sensors</tag>
+        <tag>co2</tag>
+        <tag>microcontrollers</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Learn 3D Modeling for Drone Build</title>
     <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
-    <content><![CDATA[<p>A few projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. FDM printing has been used to get roughly what is desired but the time modeling span hours and all of the features of Fusion 360 haven&#39;t been properly utilized.</p>
+    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. I’ve used FDM printing to get roughly what I need but the time modeling span hours and I don’t feel like I’m using Fusion 360 to its full potential.</p>
 <p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
 <p><u>Issues that cropped up during this project:</u><ol></p>
 <li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
@@ -73,20 +87,6 @@
         <tag>lipos</tag>
         <tag>drone</tag>
         <tag>3dmodeling</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Monitoring CO2 Levels in Apartment or Car</title>
-    <url>/2022/01/02/CO2-Monitor/</url>
-    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
-<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
-<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
-<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
-]]></content>
-      <tags>
-        <tag>sensors</tag>
-        <tag>co2</tag>
-        <tag>microcontrollers</tag>
       </tags>
   </entry>
 </search>
