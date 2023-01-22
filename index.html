@@ -124,13 +124,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -152,6 +152,93 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://odeezee.github.io/2023/01/22/Create-Real-Estate-Heat-Map/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Anthony O'Dell">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weekend Projects">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Weekend Projects">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/01/22/Create-Real-Estate-Heat-Map/" class="post-title-link" itemprop="url">Create Real Estate Heat Map</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-01-22 17:04:02 / Modified: 17:23:35" itemprop="dateCreated datePublished" datetime="2023-01-22T17:04:02-06:00">2023-01-22</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>This project will assist in wrapping my head around the real estate prices near me. This project uses a txt file with html store in it, I did it this way to avoid using a robot for price data. From the HTML the script finds address, sqft, and price.</p>
+<p>The script uses geopy.geocoders Nominatim to get the coordinates of the addresses. I had to remove the city name to make the addresses more generic otherwise I was getting NoneType for coordinates.</p>
+<pre><code>    address = address_elements[i].text
+    address = address.replace(&quot;Manor, TX&quot;, &quot;,&quot;)
+    address = address.replace(&quot;Austin, TX&quot;, &quot;,&quot;)
+    location = geolocator.geocode(address)
+</code></pre>
+<p>I used this code to generate a heatmap</p>
+<pre><code>plugins.HeatMap(data, name=&#39;Price Heatmap&#39;, 
+           overlay=True, control=False,
+           show=True,
+           min_opacity=0.2,
+           min_val=min(data, key=lambda x: x[2])[2],
+           gradient=&#123;0.2: &#39;blue&#39;, 0.4: &#39;lime&#39;, 0.6: &#39;orange&#39;, 1: &#39;red&#39;&#125;
+          ).add_to(m)
+
+m.save(&quot;heatmap2.html&quot;)
+</code></pre>
+<img src="/2023/01/22/Create-Real-Estate-Heat-Map/1.jpg" class="">
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
