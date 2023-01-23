@@ -92,7 +92,7 @@
    m.save(&quot;heatmap2.html&quot;)
 </code></pre>
 </blockquote>
-<p>Python makes it possible gather a lot of features into a few lines of code. There is a lot more I can work into this project. I&#39;m looking to make the heat map where to help visualize price alone <u><b>rather than for-sale-density and price.</b></u> This will be tricky since the house only accounts for an acre or so on the map so getting the right gradient calculation that actually extrapolates price over areas without data in a way that is insightful. I also want to work in my subjective $ value of the commute to work, has workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficientcy&#x2F;maintainability. All these rely on me being about to find the data on the property.</p>
+<p>Python makes it possible gather a lot of features into a few lines of code. There is a lot more I can work into this project. I&#39;m looking to make the heat map where to help visualize price alone <u><b>rather than for-sale-density and price.</b></u> This will be tricky since the house only accounts for an acre or so on the map so getting the right gradient calculation that actually extrapolates price over areas without data in a way that is insightful. I also want to work in my subjective $ value of the commute to work, has workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficientcy&#x2F;maintainability. All these rely on me being able to find the data on the property.</p>
 <p>Challenge accepted.</p>
 <img src="/2023/01/22/Create-Real-Estate-Heat-Map/1.jpg" class="">]]></content>
       <tags>
