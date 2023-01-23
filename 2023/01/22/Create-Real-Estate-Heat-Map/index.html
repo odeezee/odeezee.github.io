@@ -19,16 +19,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"odeezee.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","width":300,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","Available values":null,"active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high utility maps. This project uses a .txt file with html stored in it, I did">
+    <meta name="description" content="This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high-utility maps. This project uses a .txt file with html stored in it, I did">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Create Real Estate Heat Map">
 <meta property="og:url" content="https://odeezee.github.io/2023/01/22/Create-Real-Estate-Heat-Map/index.html">
 <meta property="og:site_name" content="Weekend Projects">
-<meta property="og:description" content="This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high utility maps. This project uses a .txt file with html stored in it, I did">
+<meta property="og:description" content="This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high-utility maps. This project uses a .txt file with html stored in it, I did">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://odeezee.github.io/2023/01/22/Create-Real-Estate-Heat-Map/1.jpg">
 <meta property="article:published_time" content="2023-01-22T23:04:02.000Z">
-<meta property="article:modified_time" content="2023-01-23T02:11:49.937Z">
+<meta property="article:modified_time" content="2023-01-23T02:19:09.769Z">
 <meta property="article:author" content="Anthony O&#39;Dell">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="beautifulsoup">
@@ -205,7 +205,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-01-22 17:04:02 / Modified: 20:11:49" itemprop="dateCreated datePublished" datetime="2023-01-22T17:04:02-06:00">2023-01-22</time>
+      <time title="Created: 2023-01-22 17:04:02 / Modified: 20:19:09" itemprop="dateCreated datePublished" datetime="2023-01-22T17:04:02-06:00">2023-01-22</time>
     </span>
 
   
@@ -232,7 +232,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high utility maps.</p>
+        <p>This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high-utility maps.</p>
 <p>This project uses a .txt file with html stored in it, I did it this way to avoid using a robot to collect price data. From the HTML the script finds address, sqft, and price info.</p>
 <p>The script then uses geopy.geocoders Nominatim to get coordinates for the addresses. I had to remove the city name to make the addresses more generic otherwise I get a few NoneTypes for addresses that couldn&#39;t be resolved.</p>
 <blockquote>
@@ -255,7 +255,7 @@
    m.save(&quot;heatmap2.html&quot;)
 </code></pre>
 </blockquote>
-<p>Python makes it possible gather a lot of features into a few lines of code. There is a lot more I can work into this project. I&#39;m looking to make the heat map where to help visualize price alone <u><b>rather than for-sale-density and price.</b></u> This will be tricky since the house only accounts for an acre or so on the map so getting the right gradient calculation that actually extrapolates price over areas without data in a way that is insightful. I also want to work in my subjective $ value of the commute to work, has workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficientcy&#x2F;maintainability. All these rely on me being able to find the data on the property.</p>
+<p>Python makes it possible to synergize a lot of features into a few lines of code. There are a lot more I can work into this project. I&#39;m looking to make the heat map where to help visualize price alone <u><b>rather than for-sale-density and price.</b></u> This will be tricky since the house only accounts for an acre or so on the map so getting the right gradient calculation that extrapolates price over areas without data in an insightful way. I also want to work in my subjective $ value of the commute to work, sqft of workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficiency&#x2F;maintainability. All these rely on my being able to find the data on the property.</p>
 <p>Challenge accepted.</p>
 <img src="/2023/01/22/Create-Real-Estate-Heat-Map/1.jpg" class="">
     </div>
