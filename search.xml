@@ -69,9 +69,9 @@
   <entry>
     <title>Create Real Estate Heat Map</title>
     <url>/2023/01/22/Create-Real-Estate-Heat-Map/</url>
-    <content><![CDATA[<p>This project will assist in wrapping my head around the real estate prices near me and also proofing the concept of creating maps to visualize spatial data. </p>
-<p>This project uses a txt file with html stored in it, I did it this way to avoid using a robot for price data. From the HTML the script finds address, sqft, and price info.</p>
-<p>The script uses geopy.geocoders Nominatim to get the coordinates of the addresses. I had to remove the city name to make the addresses more generic otherwise I was getting NoneType for coordinates.</p>
+    <content><![CDATA[<p>This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high utility maps.</p>
+<p>This project uses a .txt file with html stored in it, I did it this way to avoid using a robot to collect price data. From the HTML the script finds address, sqft, and price info.</p>
+<p>The script then uses geopy.geocoders Nominatim to get coordinates for the addresses. I had to remove the city name to make the addresses more generic otherwise I get a few NoneTypes for addresses that couldn&#39;t be resolved.</p>
 <blockquote>
 <pre><code>   address = address_elements[i].text
    address = address.replace(&quot;Manor, TX&quot;, &quot;,&quot;)
@@ -79,7 +79,7 @@
    location = geolocator.geocode(address)
 </code></pre>
 </blockquote>
-<p>This store the address, sqft, price, and coordinates into a text file. Which is used in the next function to generate the visual.</p>
+<p>This stores the address, sqft, price, and coordinates into a text file. The file is used in the next function to generate the visual.</p>
 <p>I used this code to generate the heatmap</p>
 <blockquote>
 <pre><code>   plugins.HeatMap(data, name=&#39;Price Heatmap&#39;,
@@ -92,7 +92,8 @@
    m.save(&quot;heatmap2.html&quot;)
 </code></pre>
 </blockquote>
-<p>Python makes is possible to work a lot of features into concise a few lines of code. There is a great deal more that I can work into this project. I&#39;m looking to make the heat map where to help visualize price rather than for-sale density&#x2F;price. I also want to work in the $value of the commute to work, has workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficientcy. All these rely on me being about to find data on the property. Challenge accepted.</p>
+<p>Python makes it possible gather a lot of features into a few lines of code. There is a lot more I can work into this project. I&#39;m looking to make the heat map where to help visualize price alone <u><b>rather than for-sale-density and price.</b></u> This will be tricky since the house only accounts for an acre or so on the map so getting the right gradient calculation that actually extrapolates price over areas without data in a way that is insightful. I also want to work in my subjective $ value of the commute to work, has workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficientcy&#x2F;maintainability. All these rely on me being about to find the data on the property.</p>
+<p>Challenge accepted.</p>
 <img src="/2023/01/22/Create-Real-Estate-Heat-Map/1.jpg" class="">]]></content>
       <tags>
         <tag>python</tag>
