@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Build Inkbird PID Kit from Amazon</title>
-    <url>/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/</url>
-    <content><![CDATA[<p>Purchased <a href="https://www.amazon.com/gp/product/B08Y8GX1WT">this Amazon kit</a> to control the temperature of a  1500 watt smoker. I&#39;ve tried other off the shelf controllers but the max temperature is too low and it&#39;s not easy to adjust the temperature.</p>
-<p>Here is a link to <a href="https://www.thingiverse.com/thing:5647742">the chassis model</a>.</p>
-<img src="/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/inside.jpg" class="">
-
-<iframe width="480" height="240" src="https://www.youtube.com/embed/m8Bwifxe91g" title="Amazon Inkbird PID Kit Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
-      <tags>
-        <tag>pid</tag>
-        <tag>sensors</tag>
-        <tag>temperature</tag>
-        <tag>fusion360</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Storing Power for Outages/Camping</title>
     <url>/2022/01/01/3-0-kWh-Solar-Generator/</url>
     <content><![CDATA[<p>This project was from the beginning of 2021. It took around 40 hours over a few months. It can store around 3 kWhs and has a max output of 2500 watts peak&#x2F;1500 watts continuous. It can run a campsite and be charged off of a laptop charger or solar panels&#x2F;wind generator – anything that produces between 12 and 48 volts of power.</p>
@@ -53,17 +38,18 @@
       </tags>
   </entry>
   <entry>
-    <title>Monitoring CO2 Levels in Apartment or Car</title>
-    <url>/2022/01/02/CO2-Monitor/</url>
-    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
-<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
-<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
-<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
-]]></content>
+    <title>Build Inkbird PID Kit from Amazon</title>
+    <url>/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/</url>
+    <content><![CDATA[<p>Purchased <a href="https://www.amazon.com/gp/product/B08Y8GX1WT">this Amazon kit</a> to control the temperature of a  1500 watt smoker. I&#39;ve tried other off the shelf controllers but the max temperature is too low and it&#39;s not easy to adjust the temperature.</p>
+<p>Here is a link to <a href="https://www.thingiverse.com/thing:5647742">the chassis model</a>.</p>
+<img src="/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/inside.jpg" class="">
+
+<iframe width="480" height="240" src="https://www.youtube.com/embed/m8Bwifxe91g" title="Amazon Inkbird PID Kit Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
       <tags>
+        <tag>pid</tag>
         <tag>sensors</tag>
-        <tag>co2</tag>
-        <tag>microcontrollers</tag>
+        <tag>temperature</tag>
+        <tag>fusion360</tag>
       </tags>
   </entry>
   <entry>
@@ -103,6 +89,20 @@
         <tag>maps</tag>
         <tag>heatmap</tag>
         <tag>folium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Monitoring CO2 Levels in Apartment or Car</title>
+    <url>/2022/01/02/CO2-Monitor/</url>
+    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
+<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
+<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
+<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
+]]></content>
+      <tags>
+        <tag>sensors</tag>
+        <tag>co2</tag>
+        <tag>microcontrollers</tag>
       </tags>
   </entry>
   <entry>
