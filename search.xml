@@ -6,13 +6,13 @@
     <content><![CDATA[<p>I am cleaning out my fridge :) and have had these 18650s in there for a while so I am using them to create a 12 volt power supply.</p>
 <p>This is a battery I will be using for a cellular signal amplifier and also used to charge my cell phone, laptop, and Lipos while out in the field - middle of nowhere. It is built from leftover 18650s from a 3.0 kWh build I did a few years ago so these have just been sitting in my fridge. Each averages ~1800 mAh so I should be able to produce 420 Wh from a full charge. I plan on charging with a 100 watt solar panel while out in the field.</p>
 <p>Long story short:<br>The positive from the protection board goes to the fuse then through the switch then to the positive ends of 12v socket, quick charge socket, the voltmeter, and the xt60 - all soldered together and head shrink wrapped. </p>
-<p>The negative side goes from the projection board to the negative ends of 12v socket, quick charge socket, the voltmeter, and the xt60. So the same with the positive but the fuse and switch aren’t involved.</p>
+<p>The negative side goes from the projection board to the negative ends of 12v socket, quick charge socket, the voltmeter, and the xt60. So the same with the positive but the fuse and switch aren&#39;t involved.</p>
 <p>The STLs for the project <a href="https://www.thingiverse.com/thing:6003895">https://www.thingiverse.com/thing:6003895</a></p>
 
 
 
 
-<iframe width="480" height="360" src="https://www.youtube.com/embed/WIsmeS5GjXg" title="(no sound) Build Remote Power Source Laptop/Lipo/Phone Charger 3S21P 18650" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="360" height="240" src="https://www.youtube.com/embed/WIsmeS5GjXg" title="(no sound) Build Remote Power Source Laptop/Lipo/Phone Charger 3S21P 18650" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ]]></content>
       <tags>
         <tag>fusion360</tag>
@@ -87,30 +87,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Learn 3D Modeling for Drone Build</title>
-    <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
-    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. I&#39;ve used FDM printing to get roughly what I need but the time modeling spans hours and I don&#39;t feel like I&#39;m using Fusion 360 to its full potential.</p>
-<p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
-<p>The STLs for the project <a href="https://www.thingiverse.com/thing:5810830">https://www.thingiverse.com/thing:5810830</a></p>
-<p><u>Issues that cropped up during this project:</u><ol></p>
-<li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
-<li>The model is too large for a typical 3d printer to print so it had to be broken into several parts (see Fusion snip below)</li>
-<li>Nylon is not a very good material for drone frames. It flexes a lot and is heavy relative to strength. The frame flexing also makes it more difficult for the flight controller to assign thrust</li>
-<li>The component tray model could not fit two 4S LiPos so it was redesigned</li></ol>
-
-<img src="/2022/11/21/Learn-Drone-Building-and-3D-Modeling/fusion360model.jpg" class="">
-
-<p>It ended up flying. I think a voltage drop ended up crashing the flight controller making it unresponsive to remote control and the drone started drifting to the unknown. Luckily it hit a power line and I was able to recover it.<iframe width="480" height="240" src="https://www.youtube.com/embed/XV6d9KvX41s" title="Drone First Flight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-]]></content>
-      <tags>
-        <tag>fusion360</tag>
-        <tag>3dmodeling</tag>
-        <tag>coursera</tag>
-        <tag>lipos</tag>
-        <tag>drone</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Create Real Estate Heat Map</title>
     <url>/2023/01/22/Create-Real-Estate-Heat-Map/</url>
     <content><![CDATA[<p>This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high-utility maps.</p>
@@ -147,6 +123,30 @@
         <tag>maps</tag>
         <tag>heatmap</tag>
         <tag>folium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Learn 3D Modeling for Drone Build</title>
+    <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
+    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. I&#39;ve used FDM printing to get roughly what I need but the time modeling spans hours and I don&#39;t feel like I&#39;m using Fusion 360 to its full potential.</p>
+<p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
+<p>The STLs for the project <a href="https://www.thingiverse.com/thing:5810830">https://www.thingiverse.com/thing:5810830</a></p>
+<p><u>Issues that cropped up during this project:</u><ol></p>
+<li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
+<li>The model is too large for a typical 3d printer to print so it had to be broken into several parts (see Fusion snip below)</li>
+<li>Nylon is not a very good material for drone frames. It flexes a lot and is heavy relative to strength. The frame flexing also makes it more difficult for the flight controller to assign thrust</li>
+<li>The component tray model could not fit two 4S LiPos so it was redesigned</li></ol>
+
+<img src="/2022/11/21/Learn-Drone-Building-and-3D-Modeling/fusion360model.jpg" class="">
+
+<p>It ended up flying. I think a voltage drop ended up crashing the flight controller making it unresponsive to remote control and the drone started drifting to the unknown. Luckily it hit a power line and I was able to recover it.<iframe width="480" height="240" src="https://www.youtube.com/embed/XV6d9KvX41s" title="Drone First Flight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+]]></content>
+      <tags>
+        <tag>fusion360</tag>
+        <tag>3dmodeling</tag>
+        <tag>coursera</tag>
+        <tag>lipos</tag>
+        <tag>drone</tag>
       </tags>
   </entry>
 </search>
