@@ -44,6 +44,7 @@
 <p>This is a battery I will be using for a cellular signal amplifier and also used to charge my cell phone, laptop, and Lipos while out in the field - middle of nowhere. It is built from leftover 18650s from a 3.0 kWh build I did a few years ago so these have just been sitting in my fridge. Each averages ~1800 mAh so I should be able to produce 420 Wh from a full charge. I plan on charging with a 100 watt solar panel while out in the field.</p>
 <p>Long story short:<br>The positive from the protection board goes to the fuse then through the switch then to the positive ends of 12v socket, quick charge socket, the voltmeter, and the xt60 - all soldered together and head shrink wrapped. </p>
 <p>The negative side goes from the projection board to the negative ends of 12v socket, quick charge socket, the voltmeter, and the xt60. So the same with the positive but the fuse and switch aren&#39;t involved.</p>
+<p>The material links can be found on the Thigiverse&#x2F;YouTube links below.</p>
 <p>The STLs for the project <a href="https://www.thingiverse.com/thing:6003895">https://www.thingiverse.com/thing:6003895</a></p>
 <img src="/2023/05/02/3S21P-18650-Battery-Backup/1git.jpg" class="">
 <img src="/2023/05/02/3S21P-18650-Battery-Backup/2git.jpg" class="">
@@ -70,6 +71,20 @@
         <tag>pid</tag>
         <tag>sensors</tag>
         <tag>temperature</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Monitoring CO2 Levels in Apartment or Car</title>
+    <url>/2022/01/02/CO2-Monitor/</url>
+    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
+<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
+<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
+<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
+]]></content>
+      <tags>
+        <tag>sensors</tag>
+        <tag>co2</tag>
+        <tag>microcontrollers</tag>
       </tags>
   </entry>
   <entry>
@@ -109,20 +124,6 @@
         <tag>maps</tag>
         <tag>heatmap</tag>
         <tag>folium</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Monitoring CO2 Levels in Apartment or Car</title>
-    <url>/2022/01/02/CO2-Monitor/</url>
-    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
-<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
-<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
-<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
-]]></content>
-      <tags>
-        <tag>sensors</tag>
-        <tag>co2</tag>
-        <tag>microcontrollers</tag>
       </tags>
   </entry>
   <entry>
