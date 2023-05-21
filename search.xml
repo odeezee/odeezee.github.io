@@ -22,6 +22,57 @@
       </tags>
   </entry>
   <entry>
+    <title>Monitoring CO2 Levels in Apartment or Car</title>
+    <url>/2022/01/02/CO2-Monitor/</url>
+    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
+<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
+<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
+<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
+]]></content>
+      <tags>
+        <tag>sensors</tag>
+        <tag>co2</tag>
+        <tag>microcontrollers</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Storing Power for Outages/Camping</title>
+    <url>/2022/01/01/3-0-kWh-Solar-Generator/</url>
+    <content><![CDATA[<p>This project was from the beginning of 2021. It took around 40 hours over a few months. It can store around 3 kWhs and has a max output of 2500 watts peak&#x2F;1500 watts continuous. It can run a campsite and be charged off of a laptop charger or solar panels&#x2F;wind generator – anything that produces between 12 and 48 volts of power.</p>
+<p>Most of the project is based on <a href="https://youtu.be/PVnQ87Fvsk4">LithiumSolar&#39;s video</a>.</p>
+<p>Recycled 2200 mAh modem cells were sourced from <a href="batteryhookup.com">batteryhookup.com</a>. I&#39;ve sourced some 2600 mAh cells but not the 364 required for this project. The total storage of the generator ended up being a little less than 3.0 kWh after testing all cells.</p>
+<table>
+<thead>
+<tr>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/1.jpg" class=""></th>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/2.jpg" class=""></th>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/10.jpg" class=""></th>
+</tr>
+</thead>
+</table>
+<p>A kWeld was used for spot welding. 4P nickel strip was sourced to simplify connections for each parallel group.</p>
+<table>
+<thead>
+<tr>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/4.jpg" class=""></th>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/5.jpg" class=""></th>
+<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/6.jpg" class=""></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/2022/01/01/3-0-kWh-Solar-Generator/7.jpg" class=""></td>
+<td><img src="/2022/01/01/3-0-kWh-Solar-Generator/11.jpg" class=""></td>
+<td><img src="/2022/01/01/3-0-kWh-Solar-Generator/8.jpg" class=""></td>
+</tr>
+</tbody></table>
+<img src="/2022/01/01/3-0-kWh-Solar-Generator/9.jpg" class="">]]></content>
+      <tags>
+        <tag>18650s</tag>
+        <tag>solar</tag>
+        <tag>bms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Build Inkbird PID Kit from Amazon</title>
     <url>/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/</url>
     <content><![CDATA[<p>Purchased <a href="https://www.amazon.com/gp/product/B08Y8GX1WT">this Amazon kit</a> to control the temperature of a  1500 watt smoker. I&#39;ve tried other off the shelf controllers but the max temperature is too low and it&#39;s not easy to adjust the temperature.</p>
@@ -31,9 +82,72 @@
 <iframe width="480" height="240" src="https://www.youtube.com/embed/m8Bwifxe91g" title="Amazon Inkbird PID Kit Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
       <tags>
         <tag>fusion360</tag>
-        <tag>pid</tag>
         <tag>sensors</tag>
+        <tag>pid</tag>
         <tag>temperature</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Create Real Estate Heat Map</title>
+    <url>/2023/01/22/Create-Real-Estate-Heat-Map/</url>
+    <content><![CDATA[<p>This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high-utility maps.</p>
+<p>This project uses a .txt file with html stored in it, I did it this way to avoid using a robot to collect price data. From the HTML the script finds address, sqft, and price info.</p>
+<p>The script then uses geopy.geocoders Nominatim to get coordinates for the addresses. I had to remove the city name to make the addresses more generic otherwise I get a few NoneTypes for addresses that couldn&#39;t be resolved.</p>
+<blockquote>
+<pre><code>   address = address_elements[i].text
+   address = address.replace(&quot;Manor, TX&quot;, &quot;,&quot;)
+   address = address.replace(&quot;Austin, TX&quot;, &quot;,&quot;)
+   location = geolocator.geocode(address)
+</code></pre>
+</blockquote>
+<p>This stores the address, sqft, price, and coordinates into a text file. The file is used in the next function to generate the visual.</p>
+<p>I used this code to generate the heatmap</p>
+<blockquote>
+<pre><code>   plugins.HeatMap(data, name=&#39;Price Heatmap&#39;,
+   overlay=True, control=False,
+   show=True,min_opacity=0.2,
+   min_val=min(data, key=lambda x: x[2])[2],
+   gradient=&#123;0.2: &#39;blue&#39;, 0.4: &#39;lime&#39;, 0.6: &#39;orange&#39;, 1: &#39;red&#39;&#125;
+   ).add_to(m)
+   
+   m.save(&quot;heatmap2.html&quot;)
+</code></pre>
+</blockquote>
+<p>Python makes it possible to synergize a lot of features into a few lines of code. There is a lot more I can work into this project. I&#39;m looking to make the heat map where to help visualize price alone <u><b>rather than for-sale-density and price.</b></u> This will be tricky since the house only accounts for an acre or so on the map so getting the right gradient calculation that extrapolates price over areas without data in an insightful way. I also want to work in my subjective $ value of the commute to work, sqft of workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficiency&#x2F;maintainability. All these rely on my being able to find the data for the property.</p>
+<p>Challenge accepted.</p>
+<img src="/2023/01/22/Create-Real-Estate-Heat-Map/1.jpg" class="">]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>beautifulsoup</tag>
+        <tag>geopy</tag>
+        <tag>nominatim</tag>
+        <tag>maps</tag>
+        <tag>heatmap</tag>
+        <tag>folium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Learn 3D Modeling for Drone Build</title>
+    <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
+    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. I&#39;ve used FDM printing to get roughly what I need but the time modeling spans hours and I don&#39;t feel like I&#39;m using Fusion 360 to its full potential.</p>
+<p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
+<p>The STLs for the project <a href="https://www.thingiverse.com/thing:5810830">https://www.thingiverse.com/thing:5810830</a></p>
+<p><u>Issues that cropped up during this project:</u><ol></p>
+<li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
+<li>The model is too large for a typical 3d printer to print so it had to be broken into several parts (see Fusion snip below)</li>
+<li>Nylon is not a very good material for drone frames. It flexes a lot and is heavy relative to strength. The frame flexing also makes it more difficult for the flight controller to assign thrust</li>
+<li>The component tray model could not fit two 4S LiPos so it was redesigned</li></ol>
+
+<img src="/2022/11/21/Learn-Drone-Building-and-3D-Modeling/fusion360model.jpg" class="">
+
+<p>It ended up flying. I think a voltage drop ended up crashing the flight controller making it unresponsive to remote control and the drone started drifting to the unknown. Luckily it hit a power line and I was able to recover it.<iframe width="480" height="240" src="https://www.youtube.com/embed/XV6d9KvX41s" title="Drone First Flight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+]]></content>
+      <tags>
+        <tag>fusion360</tag>
+        <tag>3dmodeling</tag>
+        <tag>coursera</tag>
+        <tag>lipos</tag>
+        <tag>drone</tag>
       </tags>
   </entry>
   <entry>
@@ -42,7 +156,7 @@
     <content><![CDATA[<p>This is a random project - “How to have an animated heat map with slider bar”</p>
 <p>Lots of issues cropped up. Mostly from getting out of the swing of the different data structures and using pandas.</p>
 <a href="/2023/05/21/Heat-Map-Over-Time/heatmap.html" title="Produced Heat Map">Produced Heat Map</a>
-<a href="/2023/05/21/Heat-Map-Over-Time/data.csv" title="from this CSV file">from this CSV file</a>
+
 
 <pre><code>import folium
 import folium.plugins as plugins
@@ -110,120 +224,6 @@ m
         <tag>heatmap</tag>
         <tag>folium</tag>
         <tag>pandas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Create Real Estate Heat Map</title>
-    <url>/2023/01/22/Create-Real-Estate-Heat-Map/</url>
-    <content><![CDATA[<p>This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high-utility maps.</p>
-<p>This project uses a .txt file with html stored in it, I did it this way to avoid using a robot to collect price data. From the HTML the script finds address, sqft, and price info.</p>
-<p>The script then uses geopy.geocoders Nominatim to get coordinates for the addresses. I had to remove the city name to make the addresses more generic otherwise I get a few NoneTypes for addresses that couldn&#39;t be resolved.</p>
-<blockquote>
-<pre><code>   address = address_elements[i].text
-   address = address.replace(&quot;Manor, TX&quot;, &quot;,&quot;)
-   address = address.replace(&quot;Austin, TX&quot;, &quot;,&quot;)
-   location = geolocator.geocode(address)
-</code></pre>
-</blockquote>
-<p>This stores the address, sqft, price, and coordinates into a text file. The file is used in the next function to generate the visual.</p>
-<p>I used this code to generate the heatmap</p>
-<blockquote>
-<pre><code>   plugins.HeatMap(data, name=&#39;Price Heatmap&#39;,
-   overlay=True, control=False,
-   show=True,min_opacity=0.2,
-   min_val=min(data, key=lambda x: x[2])[2],
-   gradient=&#123;0.2: &#39;blue&#39;, 0.4: &#39;lime&#39;, 0.6: &#39;orange&#39;, 1: &#39;red&#39;&#125;
-   ).add_to(m)
-   
-   m.save(&quot;heatmap2.html&quot;)
-</code></pre>
-</blockquote>
-<p>Python makes it possible to synergize a lot of features into a few lines of code. There is a lot more I can work into this project. I&#39;m looking to make the heat map where to help visualize price alone <u><b>rather than for-sale-density and price.</b></u> This will be tricky since the house only accounts for an acre or so on the map so getting the right gradient calculation that extrapolates price over areas without data in an insightful way. I also want to work in my subjective $ value of the commute to work, sqft of workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficiency&#x2F;maintainability. All these rely on my being able to find the data for the property.</p>
-<p>Challenge accepted.</p>
-<img src="/2023/01/22/Create-Real-Estate-Heat-Map/1.jpg" class="">]]></content>
-      <tags>
-        <tag>python</tag>
-        <tag>maps</tag>
-        <tag>heatmap</tag>
-        <tag>folium</tag>
-        <tag>beautifulsoup</tag>
-        <tag>geopy</tag>
-        <tag>nominatim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Learn 3D Modeling for Drone Build</title>
-    <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
-    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. I&#39;ve used FDM printing to get roughly what I need but the time modeling spans hours and I don&#39;t feel like I&#39;m using Fusion 360 to its full potential.</p>
-<p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
-<p>The STLs for the project <a href="https://www.thingiverse.com/thing:5810830">https://www.thingiverse.com/thing:5810830</a></p>
-<p><u>Issues that cropped up during this project:</u><ol></p>
-<li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
-<li>The model is too large for a typical 3d printer to print so it had to be broken into several parts (see Fusion snip below)</li>
-<li>Nylon is not a very good material for drone frames. It flexes a lot and is heavy relative to strength. The frame flexing also makes it more difficult for the flight controller to assign thrust</li>
-<li>The component tray model could not fit two 4S LiPos so it was redesigned</li></ol>
-
-<img src="/2022/11/21/Learn-Drone-Building-and-3D-Modeling/fusion360model.jpg" class="">
-
-<p>It ended up flying. I think a voltage drop ended up crashing the flight controller making it unresponsive to remote control and the drone started drifting to the unknown. Luckily it hit a power line and I was able to recover it.<iframe width="480" height="240" src="https://www.youtube.com/embed/XV6d9KvX41s" title="Drone First Flight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-]]></content>
-      <tags>
-        <tag>fusion360</tag>
-        <tag>3dmodeling</tag>
-        <tag>coursera</tag>
-        <tag>lipos</tag>
-        <tag>drone</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Monitoring CO2 Levels in Apartment or Car</title>
-    <url>/2022/01/02/CO2-Monitor/</url>
-    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
-<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
-<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
-<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
-]]></content>
-      <tags>
-        <tag>sensors</tag>
-        <tag>co2</tag>
-        <tag>microcontrollers</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Storing Power for Outages/Camping</title>
-    <url>/2022/01/01/3-0-kWh-Solar-Generator/</url>
-    <content><![CDATA[<p>This project was from the beginning of 2021. It took around 40 hours over a few months. It can store around 3 kWhs and has a max output of 2500 watts peak&#x2F;1500 watts continuous. It can run a campsite and be charged off of a laptop charger or solar panels&#x2F;wind generator – anything that produces between 12 and 48 volts of power.</p>
-<p>Most of the project is based on <a href="https://youtu.be/PVnQ87Fvsk4">LithiumSolar&#39;s video</a>.</p>
-<p>Recycled 2200 mAh modem cells were sourced from <a href="batteryhookup.com">batteryhookup.com</a>. I&#39;ve sourced some 2600 mAh cells but not the 364 required for this project. The total storage of the generator ended up being a little less than 3.0 kWh after testing all cells.</p>
-<table>
-<thead>
-<tr>
-<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/1.jpg" class=""></th>
-<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/2.jpg" class=""></th>
-<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/10.jpg" class=""></th>
-</tr>
-</thead>
-</table>
-<p>A kWeld was used for spot welding. 4P nickel strip was sourced to simplify connections for each parallel group.</p>
-<table>
-<thead>
-<tr>
-<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/4.jpg" class=""></th>
-<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/5.jpg" class=""></th>
-<th><img src="/2022/01/01/3-0-kWh-Solar-Generator/6.jpg" class=""></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><img src="/2022/01/01/3-0-kWh-Solar-Generator/7.jpg" class=""></td>
-<td><img src="/2022/01/01/3-0-kWh-Solar-Generator/11.jpg" class=""></td>
-<td><img src="/2022/01/01/3-0-kWh-Solar-Generator/8.jpg" class=""></td>
-</tr>
-</tbody></table>
-<img src="/2022/01/01/3-0-kWh-Solar-Generator/9.jpg" class="">]]></content>
-      <tags>
-        <tag>18650s</tag>
-        <tag>solar</tag>
-        <tag>bms</tag>
       </tags>
   </entry>
 </search>
