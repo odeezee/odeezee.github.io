@@ -23,8 +23,7 @@
 <meta property="og:title" content="Weekend Projects">
 <meta property="og:url" content="https://odeezee.github.io/index.html">
 <meta property="og:site_name" content="Weekend Projects">
-<meta property="og:locale" content="en_US"><meta property="og:image" content="https://odeezee.github.io/images/apple-touch-icon-next.png">
-
+<meta property="og:locale" content="en_US">
 <meta property="article:author" content="Anthony O&#39;Dell">
 <meta name="twitter:card" content="summary">
 
@@ -125,13 +124,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -153,6 +152,153 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://odeezee.github.io/2023/05/21/Heat-Map-Over-Time/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Anthony O'Dell">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Weekend Projects">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Weekend Projects">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/05/21/Heat-Map-Over-Time/" class="post-title-link" itemprop="url">Heat Map Over Time</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-05-21 18:29:22 / Modified: 18:49:14" itemprop="dateCreated datePublished" datetime="2023-05-21T18:29:22-05:00">2023-05-21</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2023/05/21/Heat-Map-Over-Time/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/05/21/Heat-Map-Over-Time/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>This is a random project - “How to have an animated heat map with slider bar”</p>
+<p>Lots of issues cropped up. Mostly from getting out of the swing of the different data structures and using pandas.</p>
+<a href="/2023/05/21/Heat-Map-Over-Time/heatmap.html" title="Produced Heat Map">Produced Heat Map</a>
+<a href="/2023/05/21/Heat-Map-Over-Time/data.csv" title="from this CSV file">from this CSV file</a>
+
+<pre><code>import folium
+import folium.plugins as plugins
+import numpy as np
+
+from datetime import datetime, timedelta
+import pandas as pd
+
+# Read the data from the CSV file
+df = pd.read_csv(&#39;your_data.csv&#39;)
+
+# Convert the date columns to the appropriate data type
+df[&#39;start_date&#39;] = pd.to_datetime(df[&#39;start_date&#39;])
+df[&#39;end_date&#39;] = pd.to_datetime(df[&#39;end_date&#39;])
+
+# Initialize a dictionary to store the data
+data_dict = &#123;&#125;
+
+# Iterate over each row in the DataFrame
+for index, row in df.iterrows():
+    start_date = row[&#39;start_date&#39;]
+    end_date = row[&#39;end_date&#39;]
+    latitude = row[&#39;latitude&#39;]
+    longitude = row[&#39;longitude&#39;]
+
+    # Generate a list of dates between the start and end date
+    dates = pd.date_range(start=start_date, end=end_date, freq=&#39;D&#39;)
+
+    # Create a row for each date and append it to the data dictionary
+    for date in dates:
+        date_str = date.date().isoformat()
+        coordinates = [latitude, longitude]
+        if date_str in data_dict:
+            data_dict[date_str].append(coordinates)
+        else:
+            data_dict[date_str] = [coordinates]
+
+# Convert the data dictionary to a list of lists
+data = [[date, coordinates] for date, coordinates in data_dict.items()]
+
+# Create a new DataFrame from the data list
+new_df = pd.DataFrame(data, columns=[&#39;date&#39;, &#39;coordinates&#39;])
+
+date_list = new_df[&#39;date&#39;].values.tolist()
+coordinate_list = new_df[&#39;coordinates&#39;].values.tolist()
+
+# Save the DataFrame to a CSV file
+new_df.to_csv(&#39;output.csv&#39;, index=False)
+
+map_data = coordinate_list
+time_index = date_list
+
+m = folium.Map(location=[center_lat, center_lon], zoom_start=10)
+
+hm = plugins.HeatMapWithTime(map_data, index=time_index, auto_play=True, max_opacity=.5, radius=30)
+
+hm.add_to(m)
+
+m
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
