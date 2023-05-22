@@ -191,7 +191,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-05-21 18:29:22 / Modified: 19:17:58" itemprop="dateCreated datePublished" datetime="2023-05-21T18:29:22-05:00">2023-05-21</time>
+      <time title="Created: 2023-05-21 18:29:22 / Modified: 19:19:29" itemprop="dateCreated datePublished" datetime="2023-05-21T18:29:22-05:00">2023-05-21</time>
     </span>
 
   
@@ -276,13 +276,9 @@ map_data = coordinate_list
 time_index = date_list
 
 m = folium.Map(location=[center_lat, center_lon], zoom_start=10)
-
 hm = plugins.HeatMapWithTime(map_data, index=time_index, auto_play=True, max_opacity=.5, radius=30)
-
 hm.add_to(m)
-
 m.save(&#39;heatmap.html&#39;)
-
 m
 </code></pre>
 <img src="/2023/05/21/Heat-Map-Over-Time/heatmap.jpg" class="">
