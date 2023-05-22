@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/05/21/Heat-Map-Over-Time/" class="post-title-link" itemprop="url">Heat Map Over Time</a>
+          <a href="/2023/05/21/Heat-Map-Over-Time/" class="post-title-link" itemprop="url">Animated Heat Map Over Time</a>
         </h2>
 
         <div class="post-meta-container">
@@ -191,7 +191,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-05-21 18:29:22 / Modified: 19:07:24" itemprop="dateCreated datePublished" datetime="2023-05-21T18:29:22-05:00">2023-05-21</time>
+      <time title="Created: 2023-05-21 18:29:22 / Modified: 19:17:58" itemprop="dateCreated datePublished" datetime="2023-05-21T18:29:22-05:00">2023-05-21</time>
     </span>
 
   
@@ -218,10 +218,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>This is a random project - “How to have an animated heat map with slider bar”</p>
-<p>Lots of issues cropped up. Mostly from getting out of the swing of the different data structures and using pandas.</p>
-<p>This will be more useful once labels are added. I’ve worked in labels but it slows down Jupyter a lot and needs more work.</p>
-<a href="/2023/05/21/Heat-Map-Over-Time/heatmap.html" title="Produced Heat Map">Produced Heat Map</a> <br>
+          <p>This is a random project - “How to have an animated heat map with date slider bar”</p>
+<p>Lots of issues cropped up. Mostly from getting out of the swing of how to using pandas and different data structures.</p>
+<p>This will be more useful once labels are added to the coordinates. I’ve worked in labels but it slows down Jupyter a lot and needs more work.</p>
+<a href="/2023/05/21/Heat-Map-Over-Time/heatmap.html" title="See Heat Map">See Heat Map</a> <br>
 <a href="/2023/05/21/Heat-Map-Over-Time/data.txt" title="from this CSV file">from this CSV file</a>
 
 <pre><code>import folium
@@ -232,7 +232,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 
 # Read the data from the CSV file
-df = pd.read_csv(&#39;your_data.csv&#39;)
+df = pd.read_csv(&#39;data.csv&#39;)
 
 # Convert the date columns to the appropriate data type
 df[&#39;start_date&#39;] = pd.to_datetime(df[&#39;start_date&#39;])
@@ -285,7 +285,7 @@ m.save(&#39;heatmap.html&#39;)
 
 m
 </code></pre>
-
+<img src="/2023/05/21/Heat-Map-Over-Time/heatmap.jpg" class="">
       
     </div>
 
