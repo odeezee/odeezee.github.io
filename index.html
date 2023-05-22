@@ -191,7 +191,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-05-21 18:29:22 / Modified: 18:54:42" itemprop="dateCreated datePublished" datetime="2023-05-21T18:29:22-05:00">2023-05-21</time>
+      <time title="Created: 2023-05-21 18:29:22 / Modified: 19:07:24" itemprop="dateCreated datePublished" datetime="2023-05-21T18:29:22-05:00">2023-05-21</time>
     </span>
 
   
@@ -220,6 +220,7 @@
     <div class="post-body" itemprop="articleBody">
           <p>This is a random project - “How to have an animated heat map with slider bar”</p>
 <p>Lots of issues cropped up. Mostly from getting out of the swing of the different data structures and using pandas.</p>
+<p>This will be more useful once labels are added. I’ve worked in labels but it slows down Jupyter a lot and needs more work.</p>
 <a href="/2023/05/21/Heat-Map-Over-Time/heatmap.html" title="Produced Heat Map">Produced Heat Map</a> <br>
 <a href="/2023/05/21/Heat-Map-Over-Time/data.txt" title="from this CSV file">from this CSV file</a>
 
@@ -279,6 +280,8 @@ m = folium.Map(location=[center_lat, center_lon], zoom_start=10)
 hm = plugins.HeatMapWithTime(map_data, index=time_index, auto_play=True, max_opacity=.5, radius=30)
 
 hm.add_to(m)
+
+m.save(&#39;heatmap.html&#39;)
 
 m
 </code></pre>

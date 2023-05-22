@@ -88,10 +88,50 @@
       </tags>
   </entry>
   <entry>
+    <title>Create Real Estate Heat Map</title>
+    <url>/2023/01/22/Create-Real-Estate-Heat-Map/</url>
+    <content><![CDATA[<p>This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high-utility maps.</p>
+<p>This project uses a .txt file with html stored in it, I did it this way to avoid using a robot to collect price data. From the HTML the script finds address, sqft, and price info.</p>
+<p>The script then uses geopy.geocoders Nominatim to get coordinates for the addresses. I had to remove the city name to make the addresses more generic otherwise I get a few NoneTypes for addresses that couldn&#39;t be resolved.</p>
+<blockquote>
+<pre><code>   address = address_elements[i].text
+   address = address.replace(&quot;Manor, TX&quot;, &quot;,&quot;)
+   address = address.replace(&quot;Austin, TX&quot;, &quot;,&quot;)
+   location = geolocator.geocode(address)
+</code></pre>
+</blockquote>
+<p>This stores the address, sqft, price, and coordinates into a text file. The file is used in the next function to generate the visual.</p>
+<p>I used this code to generate the heatmap</p>
+<blockquote>
+<pre><code>   plugins.HeatMap(data, name=&#39;Price Heatmap&#39;,
+   overlay=True, control=False,
+   show=True,min_opacity=0.2,
+   min_val=min(data, key=lambda x: x[2])[2],
+   gradient=&#123;0.2: &#39;blue&#39;, 0.4: &#39;lime&#39;, 0.6: &#39;orange&#39;, 1: &#39;red&#39;&#125;
+   ).add_to(m)
+   
+   m.save(&quot;heatmap2.html&quot;)
+</code></pre>
+</blockquote>
+<p>Python makes it possible to synergize a lot of features into a few lines of code. There is a lot more I can work into this project. I&#39;m looking to make the heat map where to help visualize price alone <u><b>rather than for-sale-density and price.</b></u> This will be tricky since the house only accounts for an acre or so on the map so getting the right gradient calculation that extrapolates price over areas without data in an insightful way. I also want to work in my subjective $ value of the commute to work, sqft of workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficiency&#x2F;maintainability. All these rely on my being able to find the data for the property.</p>
+<p>Challenge accepted.</p>
+<img src="/2023/01/22/Create-Real-Estate-Heat-Map/1.jpg" class="">]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>beautifulsoup</tag>
+        <tag>geopy</tag>
+        <tag>nominatim</tag>
+        <tag>maps</tag>
+        <tag>heatmap</tag>
+        <tag>folium</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Heat Map Over Time</title>
     <url>/2023/05/21/Heat-Map-Over-Time/</url>
     <content><![CDATA[<p>This is a random project - “How to have an animated heat map with slider bar”</p>
 <p>Lots of issues cropped up. Mostly from getting out of the swing of the different data structures and using pandas.</p>
+<p>This will be more useful once labels are added. I’ve worked in labels but it slows down Jupyter a lot and needs more work.</p>
 <a href="/2023/05/21/Heat-Map-Over-Time/heatmap.html" title="Produced Heat Map">Produced Heat Map</a> <br>
 <a href="/2023/05/21/Heat-Map-Over-Time/data.txt" title="from this CSV file">from this CSV file</a>
 
@@ -152,6 +192,8 @@ hm = plugins.HeatMapWithTime(map_data, index=time_index, auto_play=True, max_opa
 
 hm.add_to(m)
 
+m.save(&#39;heatmap.html&#39;)
+
 m
 </code></pre>
 ]]></content>
@@ -161,45 +203,6 @@ m
         <tag>heatmap</tag>
         <tag>folium</tag>
         <tag>pandas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Create Real Estate Heat Map</title>
-    <url>/2023/01/22/Create-Real-Estate-Heat-Map/</url>
-    <content><![CDATA[<p>This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high-utility maps.</p>
-<p>This project uses a .txt file with html stored in it, I did it this way to avoid using a robot to collect price data. From the HTML the script finds address, sqft, and price info.</p>
-<p>The script then uses geopy.geocoders Nominatim to get coordinates for the addresses. I had to remove the city name to make the addresses more generic otherwise I get a few NoneTypes for addresses that couldn&#39;t be resolved.</p>
-<blockquote>
-<pre><code>   address = address_elements[i].text
-   address = address.replace(&quot;Manor, TX&quot;, &quot;,&quot;)
-   address = address.replace(&quot;Austin, TX&quot;, &quot;,&quot;)
-   location = geolocator.geocode(address)
-</code></pre>
-</blockquote>
-<p>This stores the address, sqft, price, and coordinates into a text file. The file is used in the next function to generate the visual.</p>
-<p>I used this code to generate the heatmap</p>
-<blockquote>
-<pre><code>   plugins.HeatMap(data, name=&#39;Price Heatmap&#39;,
-   overlay=True, control=False,
-   show=True,min_opacity=0.2,
-   min_val=min(data, key=lambda x: x[2])[2],
-   gradient=&#123;0.2: &#39;blue&#39;, 0.4: &#39;lime&#39;, 0.6: &#39;orange&#39;, 1: &#39;red&#39;&#125;
-   ).add_to(m)
-   
-   m.save(&quot;heatmap2.html&quot;)
-</code></pre>
-</blockquote>
-<p>Python makes it possible to synergize a lot of features into a few lines of code. There is a lot more I can work into this project. I&#39;m looking to make the heat map where to help visualize price alone <u><b>rather than for-sale-density and price.</b></u> This will be tricky since the house only accounts for an acre or so on the map so getting the right gradient calculation that extrapolates price over areas without data in an insightful way. I also want to work in my subjective $ value of the commute to work, sqft of workshop area (garage&#x2F;shed), foundation&#x2F;soil, and efficiency&#x2F;maintainability. All these rely on my being able to find the data for the property.</p>
-<p>Challenge accepted.</p>
-<img src="/2023/01/22/Create-Real-Estate-Heat-Map/1.jpg" class="">]]></content>
-      <tags>
-        <tag>python</tag>
-        <tag>maps</tag>
-        <tag>heatmap</tag>
-        <tag>folium</tag>
-        <tag>beautifulsoup</tag>
-        <tag>geopy</tag>
-        <tag>nominatim</tag>
       </tags>
   </entry>
   <entry>
