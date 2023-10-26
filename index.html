@@ -23,7 +23,7 @@
 <meta property="og:title" content="Weekend Projects">
 <meta property="og:url" content="https://odeezee.github.io/index.html">
 <meta property="og:site_name" content="Weekend Projects">
-<meta property="og:locale" content="en_US"><meta property="og:image" content="https://odeezee.github.io/images/apple-touch-icon-next.png">
+<meta property="og:locale" content="en_US">
 <meta property="article:author" content="Anthony O&#39;Dell">
 <meta name="twitter:card" content="summary">
 
@@ -191,7 +191,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-10-26 16:27:16 / Modified: 18:08:24" itemprop="dateCreated datePublished" datetime="2023-10-26T16:27:16-05:00">2023-10-26</time>
+      <time title="Created: 2023-10-26 16:27:16 / Modified: 18:26:56" itemprop="dateCreated datePublished" datetime="2023-10-26T16:27:16-05:00">2023-10-26</time>
     </span>
 
   
@@ -219,7 +219,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>My Ender 3 PSU failed and made the mainboard unstable, started blowing the breaker so both needed to be replaced. While I was taking my machine apart and making changes I decided to overhaul a few things and upgrades others.</p>
-<p>This project entailed:</p>
+<p>Project Punch List:</p>
 <p>Essential:</p>
 <ol>
 <li>Replacing mainboard and power supply</li>
@@ -235,19 +235,19 @@
 <li>Installed higher wattage hotend heating cartridge</li>
 <li>Installed 24 volt cable to supply power to filament dryer</li>
 </ol>
-<p>Issues that came up:<br>Many issues came up with dual Z axis and thread pitch change. </p>
+<p>Bottlenecks:<br>Issues came up with dual Z axis and thread pitch change. </p>
 <ol>
-<li>The thread pitch was easy - just increase the steps to 1600steps&#x2F;mm and print&#x2F;measure calibration cube then reconfigure. </li>
-<li>Had a lot of issues with binding&#x2F;grinding&#x2F;squealing which I resolved with the following (order of importance)<ul>
+<li>Adjusting for the new thread pitch was easy - just increase the steps to 1600steps&#x2F;mm and print&#x2F;measure calibration cube then reconfigure. </li>
+<li>Had issues with binding&#x2F;grinding&#x2F;squealing from the rods on the mounts which were resolved with the following (order of importance)<ul>
 <li>increased the Z motor amperage from the default to ~1 amp - this was the first thing I figured which restored my hope in the project</li>
 <li>loosened the screws holding screw nut to the x axis which allowed the threaded rod some up&#x2F;down play in the y axis</li>
 <li>lots of dry lube</li>
-<li>installed flexible shaft couplings to the rods<br>One thing to consider when replacing the heating cartridge with a higher wattage is running a PID tuning. Easy but I didn&#39;t think of it beforehand.</li>
+<li>installed flexible shaft couplings to the rods<br>One thing to consider when replacing the heating cartridge with a higher wattage is running PID tuning then reconfigure with those results.</li>
 </ul>
 </li>
 </ol>
-<p>Overall thoughts of the project. The modeling took about 6 hours to do but I procrastinated. Once I moved from having a 2D sketch to having a 3D outline of the bottom I knocked out the rest of the project of the next couple of weeks, modeling then test printing.</p>
-<p>Both the Dual Z and the slower pitch threaded rod greatly increase my prints. I think this is mostly because of the increase Z precision from the 1600 steps per MM rather than 400 I had previously.</p>
+<p>The modeling took about 6 hours to do but I procrastinated. Once I moved from having a 2D sketch to having a 3D outline of the bottom I knocked out the rest of the project of the next couple of weeks - modeling and test printing.</p>
+<p>Both the Dual Z and the slower pitch threaded rod greatly improved my tall prints. I think this is mostly because of the increased Z precision from the 1600 steps per mm rather than 400 I had previously.</p>
 <table>
 <thead>
 <tr>
