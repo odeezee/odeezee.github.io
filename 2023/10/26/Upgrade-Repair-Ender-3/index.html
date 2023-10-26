@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://odeezee.github.io/2023/10/26/Upgrade-Repair-Ender-3/secondZ.jpg">
 <meta property="og:image" content="https://odeezee.github.io/2023/10/26/Upgrade-Repair-Ender-3/back.jpg">
 <meta property="article:published_time" content="2023-10-26T21:27:16.000Z">
-<meta property="article:modified_time" content="2023-10-26T23:26:56.812Z">
+<meta property="article:modified_time" content="2023-10-26T23:57:42.609Z">
 <meta property="article:author" content="Anthony O&#39;Dell">
 <meta property="article:tag" content="fusion360">
 <meta property="article:tag" content="3dmodeling">
@@ -207,7 +207,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2023-10-26 16:27:16 / Modified: 18:26:56" itemprop="dateCreated datePublished" datetime="2023-10-26T16:27:16-05:00">2023-10-26</time>
+      <time title="Created: 2023-10-26 16:27:16 / Modified: 18:57:42" itemprop="dateCreated datePublished" datetime="2023-10-26T16:27:16-05:00">2023-10-26</time>
     </span>
 
   
@@ -236,32 +236,32 @@
     <div class="post-body" itemprop="articleBody">
         <p>My Ender 3 PSU failed and made the mainboard unstable, started blowing the breaker so both needed to be replaced. While I was taking my machine apart and making changes I decided to overhaul a few things and upgrades others.</p>
 <p>Project Punch List:</p>
-<p>Essential:</p>
-<ol>
-<li>Replacing mainboard and power supply</li>
-<li>Modelled a new chassis to for components and new power supply (<a target="_blank" rel="noopener" href="https://www.thingiverse.com/thing:6283887">link to model</a>)</li>
-<li>Grounding main frame, X axis &amp; gantry, and heatbed</li>
-<li>Replace poorly designeddual extruder - the steel teeth have dug into the aluminum</li>
-</ol>
-<p>Upgrades:</p>
-<ol>
+<p><u>Essential:</u><ol></p>
+<li>Replaced mainboard and power supply</li>
+<li>Modelled a new chassis to for components and new power supply ([link to model](https://www.thingiverse.com/thing:6283887))</li>
+<li>Grounded main frame, X axis & gantry, and heatbed</li>
+<li>Replaced poorly designed dual extruder - the steel teeth dug into the aluminum</li></ol>
+
+<p><u>Upgrades:</u><ol></p>
 <li>Installed Dual Z axis and switched to 2mm pitch thread screw</li>
-<li>Installed power metering module - measures: voltage&#x2F;frequency&#x2F;current&#x2F;wattage and total kWh for each project</li>
-<li>Installed new all metal hotend that allows higher temperature thermocouple</li>
+<li>Installed power metering module - measures: voltage/frequency/current/wattage and total kWh for each project</li>
+<li>Installed new all metal hotend that allows higher temperature rated thermocouple</li>
 <li>Installed higher wattage hotend heating cartridge</li>
-<li>Installed 24 volt cable to supply power to filament dryer</li>
-</ol>
-<p>Bottlenecks:<br>Issues came up with dual Z axis and thread pitch change. </p>
+<li>Installed 24 volt cable to supply power to filament dryer</li></ol>
+
+
+<p><u>Bottlenecks:</u><br><br>Some problems came up with dual Z axis and thread pitch change.</p>
+<ol><li>Adjusting for the new thread pitch was easy - just increase the steps to 1600steps/mm and print/measure calibration cube then reconfigure.</li>
+    <li>Had issues with binding/grinding/squealing from the rods getting caught up in the mounts which were resolved with the following (order of importance)</li>
 <ol>
-<li>Adjusting for the new thread pitch was easy - just increase the steps to 1600steps&#x2F;mm and print&#x2F;measure calibration cube then reconfigure. </li>
-<li>Had issues with binding&#x2F;grinding&#x2F;squealing from the rods on the mounts which were resolved with the following (order of importance)<ul>
-<li>increased the Z motor amperage from the default to ~1 amp - this was the first thing I figured which restored my hope in the project</li>
-<li>loosened the screws holding screw nut to the x axis which allowed the threaded rod some up&#x2F;down play in the y axis</li>
-<li>lots of dry lube</li>
-<li>installed flexible shaft couplings to the rods<br>One thing to consider when replacing the heating cartridge with a higher wattage is running PID tuning then reconfigure with those results.</li>
-</ul>
-</li>
-</ol>
+    <li>increased the Z motor amperage from the default to ~1 amp - this was the first thing I figured which restored my hope in the project. This increase binding but fixed the issue with only one Z stepper turning</li>
+    <li>loosened the screws holding screw nut to the x axis which allowed the threaded rod some up/down play in the y axis. Eliminated binding.</li>
+    <li>lots of dry lube. Decreased squealing.</li>
+    <li>Installed flexible shaft couplings to the rods. Decreased the chance of binding.</li>
+</ol></ol>
+One thing to consider when replacing the heating cartridge with a higher wattage is running PID tuning then reconfigure with those results.
+
+
 <p>The modeling took about 6 hours to do but I procrastinated. Once I moved from having a 2D sketch to having a 3D outline of the bottom I knocked out the rest of the project of the next couple of weeks - modeling and test printing.</p>
 <p>Both the Dual Z and the slower pitch threaded rod greatly improved my tall prints. I think this is mostly because of the increased Z precision from the 1600 steps per mm rather than 400 I had previously.</p>
 <table>
