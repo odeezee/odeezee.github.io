@@ -166,6 +166,61 @@ m
       </tags>
   </entry>
   <entry>
+    <title>Upgrade/Repair Ender 3</title>
+    <url>/2023/10/26/Upgrade-Repair-Ender-3/</url>
+    <content><![CDATA[<p>My 3D printer&#39;s power supply failed and made the mainboard unstable, started blowing breaker (I think false arc faults from EMI) so both needed to be replaced. Since I&#39;m was taking the machine apart and making changes I decided to overhaul a few things and upgrades others.</p>
+<p>Project Punch List:</p>
+<p><u>Essential:</u><ol></p>
+<li>Replaced mainboard and power supply</li>
+<li>Modelled a bigger chassis for new components and power supply ([link to model](https://www.thingiverse.com/thing:6283887))</li>
+<li>Grounded main frame, X axis & gantry, and heatbed</li>
+<li>Replaced poorly designed dual extruder - the steel teeth dug into the aluminum(looked like it could fail soon)</li></ol>
+
+<p><u>Upgrades:</u><ol></p>
+<li>Installed Dual Z axis and switched to 2mm pitch thread screw</li>
+<li>Installed power metering module - measures: voltage/frequency/current/wattage and total kWh for each project</li>
+<li>Installed new all metal hotend that allows >300C rated thermocouple so eventually I can print carbon fiber nylon</li>
+<li>Installed higher wattage hotend heating cartridge</li>
+<li>Installed 24 volt cable to supply power to filament dryer</li></ol>
+
+
+<p><u>Bottlenecks:</u><br><br>Some problems came up with dual Z axis and thread pitch change.</p>
+<ol><li>Adjusting for the new thread pitch was easy - just increase the steps to 1600steps/mm and print/measure calibration cube then reconfigure.</li>
+    <li>Had issues with binding/grinding/squealing from the rods getting caught up in the mounts which were resolved with the following (order of importance)</li>
+<ol>
+    <li>increased the Z motor amperage from the default to ~1 amp - this was the first thing I figured which restored my hope in the project. This increase binding but fixed the issue with only one Z stepper turning</li>
+    <li>loosened the screws holding screw nut to the x axis which allowed the threaded rod some up/down play in the y axis. Eliminated binding.</li>
+    <li>lots of dry lube. Decreased squealing.</li>
+    <li>Installed flexible shaft couplings to the rods. Decreased the chance of binding.</li>
+</ol></ol>
+One thing to consider when replacing the heating cartridge with a higher wattage is running PID tuning then reconfigure with those results.
+
+
+<p>The modeling took about 6 hours to do but I procrastinated. Once I moved from having a 2D sketch to having a 3D outline of the bottom I knocked out the rest of the project of the next couple of weeks - modeling and test printing.</p>
+<p>Both the Dual Z and the slower pitch threaded rod greatly improved my tall prints. I think this is mostly because of the increased Z precision from the 1600 steps per mm rather than 400 I had previously.</p>
+<table>
+<thead>
+<tr>
+<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/side.jpg" class=""></th>
+<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/grounding.jpg" class=""></th>
+<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/side2.jpg" class=""></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/top.jpg" class=""></td>
+<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/secondZ.jpg" class=""></td>
+<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/back.jpg" class=""></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>fusion360</tag>
+        <tag>3dmodeling</tag>
+        <tag>ender3</tag>
+        <tag>3dprinting</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Create Real Estate Heat Map</title>
     <url>/2023/01/22/Create-Real-Estate-Heat-Map/</url>
     <content><![CDATA[<p>This project will assist in wrapping my head around the real estate prices near me and also proof of concept for creating high-utility maps.</p>
@@ -226,61 +281,6 @@ m
         <tag>coursera</tag>
         <tag>lipos</tag>
         <tag>drone</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Upgrade/Repair Ender 3</title>
-    <url>/2023/10/26/Upgrade-Repair-Ender-3/</url>
-    <content><![CDATA[<p>My 3D printer&#x2F;‘s power supply failed and made the mainboard unstable, started blowing breaker (I think false arc faults from EMI) so both needed to be replaced. Since I&#39;m was taking the machine apart and making changes I decided to overhaul a few things and upgrades others.</p>
-<p>Project Punch List:</p>
-<p><u>Essential:</u><ol></p>
-<li>Replaced mainboard and power supply</li>
-<li>Modelled a bigger chassis for new components and power supply ([link to model](https://www.thingiverse.com/thing:6283887))</li>
-<li>Grounded main frame, X axis & gantry, and heatbed</li>
-<li>Replaced poorly designed dual extruder - the steel teeth dug into the aluminum(looked like it could fail soon)</li></ol>
-
-<p><u>Upgrades:</u><ol></p>
-<li>Installed Dual Z axis and switched to 2mm pitch thread screw</li>
-<li>Installed power metering module - measures: voltage/frequency/current/wattage and total kWh for each project</li>
-<li>Installed new all metal hotend that allows >300C rated thermocouple so eventually I can print carbon fiber nylon</li>
-<li>Installed higher wattage hotend heating cartridge</li>
-<li>Installed 24 volt cable to supply power to filament dryer</li></ol>
-
-
-<p><u>Bottlenecks:</u><br><br>Some problems came up with dual Z axis and thread pitch change.</p>
-<ol><li>Adjusting for the new thread pitch was easy - just increase the steps to 1600steps/mm and print/measure calibration cube then reconfigure.</li>
-    <li>Had issues with binding/grinding/squealing from the rods getting caught up in the mounts which were resolved with the following (order of importance)</li>
-<ol>
-    <li>increased the Z motor amperage from the default to ~1 amp - this was the first thing I figured which restored my hope in the project. This increase binding but fixed the issue with only one Z stepper turning</li>
-    <li>loosened the screws holding screw nut to the x axis which allowed the threaded rod some up/down play in the y axis. Eliminated binding.</li>
-    <li>lots of dry lube. Decreased squealing.</li>
-    <li>Installed flexible shaft couplings to the rods. Decreased the chance of binding.</li>
-</ol></ol>
-One thing to consider when replacing the heating cartridge with a higher wattage is running PID tuning then reconfigure with those results.
-
-
-<p>The modeling took about 6 hours to do but I procrastinated. Once I moved from having a 2D sketch to having a 3D outline of the bottom I knocked out the rest of the project of the next couple of weeks - modeling and test printing.</p>
-<p>Both the Dual Z and the slower pitch threaded rod greatly improved my tall prints. I think this is mostly because of the increased Z precision from the 1600 steps per mm rather than 400 I had previously.</p>
-<table>
-<thead>
-<tr>
-<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/side.jpg" class=""></th>
-<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/grounding.jpg" class=""></th>
-<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/side2.jpg" class=""></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/top.jpg" class=""></td>
-<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/secondZ.jpg" class=""></td>
-<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/back.jpg" class=""></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>fusion360</tag>
-        <tag>3dmodeling</tag>
-        <tag>ender3</tag>
-        <tag>3dprinting</tag>
       </tags>
   </entry>
 </search>
