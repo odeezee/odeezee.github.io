@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Build Inkbird PID Kit from Amazon</title>
-    <url>/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/</url>
-    <content><![CDATA[<p>Purchased <a href="https://www.amazon.com/gp/product/B08Y8GX1WT">this Amazon kit</a> to control the temperature of a  1500 watt smoker. I&#39;ve tried other off the shelf controllers but the max temperature is too low and it&#39;s not easy to adjust the temperature.</p>
-<p>Here is a link to <a href="https://www.thingiverse.com/thing:5647742">the chassis model</a>.</p>
-<img src="/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/inside.jpg" class="">
+    <title>3S21P 18650 Battery Backup</title>
+    <url>/2023/05/02/3S21P-18650-Battery-Backup/</url>
+    <content><![CDATA[<p>I am cleaning out my fridge :) and have had these 18650s in there for a while so I am using them to create a 12 volt power supply.</p>
+<p>This is a battery I will be using for a cellular signal amplifier and also used to charge my cell phone, laptop, and Lipos while out in the field - middle of nowhere. It is built from leftover 18650s from a 3.0 kWh build I did a few years ago so these have just been sitting in my fridge. Each averages ~1800 mAh so I should be able to produce 420 Wh from a full charge. I plan on charging with a 100 watt solar panel while out in the field.</p>
+<p>Long story short:<br>The positive from the protection board goes to the fuse then through the switch then to the positive ends of 12v socket, quick charge socket, the voltmeter, and the xt60 - all soldered together and head shrink wrapped. </p>
+<p>The negative side goes from the projection board to the negative ends of 12v socket, quick charge socket, the voltmeter, and the xt60. So the same with the positive but the fuse and switch aren&#39;t involved.</p>
+<p>The material links can be found on the Thingiverse&#x2F;YouTube links below.</p>
+<p>The STLs for the project <a href="https://www.thingiverse.com/thing:6003895">https://www.thingiverse.com/thing:6003895</a></p>
+<img src="/2023/05/02/3S21P-18650-Battery-Backup/1git.jpg" class="">
+<img src="/2023/05/02/3S21P-18650-Battery-Backup/2git.jpg" class="">
+<img src="/2023/05/02/3S21P-18650-Battery-Backup/3git.jpg" class="">
 
-<iframe width="480" height="240" src="https://www.youtube.com/embed/m8Bwifxe91g" title="Amazon Inkbird PID Kit Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
-      <tags>
-        <tag>pid</tag>
-        <tag>sensors</tag>
-        <tag>temperature</tag>
-        <tag>fusion360</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Monitoring CO2 Levels in Apartment or Car</title>
-    <url>/2022/01/02/CO2-Monitor/</url>
-    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
-<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
-<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
-<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
+<iframe width="360" height="240" src="https://www.youtube.com/embed/WIsmeS5GjXg" title="(no sound) Build Remote Power Source Laptop/Lipo/Phone Charger 3S21P 18650" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ]]></content>
       <tags>
-        <tag>sensors</tag>
-        <tag>co2</tag>
-        <tag>microcontrollers</tag>
+        <tag>fusion360</tag>
+        <tag>18650s</tag>
+        <tag>3dmodeling</tag>
       </tags>
   </entry>
   <entry>
@@ -61,9 +53,23 @@
 </tbody></table>
 <img src="/2022/01/01/3-0-kWh-Solar-Generator/9.jpg" class="">]]></content>
       <tags>
-        <tag>solar</tag>
         <tag>18650s</tag>
+        <tag>solar</tag>
         <tag>bms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Monitoring CO2 Levels in Apartment or Car</title>
+    <url>/2022/01/02/CO2-Monitor/</url>
+    <content><![CDATA[<p>Inspiration for this project was <a href="https://makezine.com/fresh-air/">Makezine article and blog post &quot;Fresh Air&quot;</a> and <a href="https://learn.adafruit.com/adafruit-scd30">Adafruit&#39;s SCD-30 sensor page</a>.</p>
+<p>A lot of interest in indoor CO2 monitoring was sparked by a professor that built a CO2 monitor for his classroom. He found that the CO2 levels at the end of class were enough to make you groggy&#x2F;sleepy and therefore not able to learn as well.</p>
+<p>In my experimentation, an interesting discovery was the elevation of CO2 levels in a short drive with the windows up. My car, a Nissan Sentra, approached 2000 ppm in a one-person 30-minute commute. Having one window down @55 mph (90 kph) for a minute brought the levels back to below 1000 ppm.</p>
+<img src="/2022/01/02/CO2-Monitor/1.jpg" class="">
+]]></content>
+      <tags>
+        <tag>sensors</tag>
+        <tag>co2</tag>
+        <tag>microcontrollers</tag>
       </tags>
   </entry>
   <entry>
@@ -103,107 +109,6 @@
         <tag>maps</tag>
         <tag>heatmap</tag>
         <tag>folium</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Upgrade/Repair Ender 3</title>
-    <url>/2023/10/26/Upgrade-Repair-Ender-3/</url>
-    <content><![CDATA[<p>My 3D printer&#39;s power supply failed and made the mainboard unstable, started blowing breaker (I think false arc faults from EMI) so both needed to be replaced. Since I was taking the machine apart and making changes I decided to overhaul a few things.</p>
-<p><b><a href="https://www.thingiverse.com/thing:6283887">&gt;&gt;View Model&lt;&lt;</a></b></p>
-<p>Project Punch List:</p>
-<p><u>Essential:</u><ol></p>
-<li>Replaced mainboard and power supply</li>
-<li>Modelled a bigger chassis for new components and power supply</li>
-<li>Grounded main frame, X axis & gantry, and heatbed</li>
-<li>Replaced poorly designed dual extruder - the steel teeth dug into the aluminum frame(looked like it could fail soon)</li></ol>
-
-<p><u>Upgrades:</u><ol></p>
-<li>Installed Dual Z axis and switched to 2mm pitch threaded rods</li>
-<li>Installed power metering module - measures voltage/frequency/current/wattage and total kWh</li>
-<li>Installed new all metal hotend that allows >300C rated thermocouple so eventually printing carbon fiber nylon and other high temp filaments</li>
-<li>Installed higher wattage hotend heating cartridge</li>
-<li>Installed 24 volt cable to supply power to filament dryer</li></ol>
-
-
-<p><u>Bottlenecks:</u><br><br>Some problems came up with dual Z axis and thread pitch change.</p>
-<ol><li>Adjusting for the new thread pitch was easy - just increased the steps to 1600steps/mm and print and measure calibration cube then adjusted based on findings</li>
-    <li>Had issues with binding/grinding/squealing from the threaded rods binding up in their mounts which was resolved with the following (order of importance)</li>
-<ol>
-    <li>Increased the Z motor amperage from the default to ~1 amp - this was the first thing I figured which restored my hope in the project. This increased binding but fixed the issue with only one Z stepper turning and the other partially</li>
-    <li>Loosened the bolts holding threaded nut to the X axis which allowed the threaded rod some up/down play on the y axis. Largely eliminated binding</li>
-    <li>Lots of dry lube. Decreased squealing</li>
-    <li>Installed flexible shaft couplings to the rods. Decreased the chance of binding</li>
-</ol></ol>
-When replacing the heating cartridge with a higher wattage I ran PID tuning then reconfigured with those results.
-
-
-<p>The modeling took about 6 hours to do but I procrastinated. Once I moved from having a 2D sketch to having a 3D outline of the bottom I knocked out the rest of the project of the next couple of weeks - modeling and test printing.</p>
-<p>Both the Dual Z and the slower pitch threaded rod greatly improved my tall prints. I think this is mostly because of the increased Z precision from the 1600 steps per mm from the 400 I had previously.</p>
-<table>
-<thead>
-<tr>
-<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/side.jpg" class=""></th>
-<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/grounding.jpg" class=""></th>
-<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/side2.jpg" class=""></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/top.jpg" class=""></td>
-<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/secondZ.jpg" class=""></td>
-<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/back.jpg" class=""></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>fusion360</tag>
-        <tag>ender3</tag>
-        <tag>3dprinting</tag>
-        <tag>3dmodeling</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3S21P 18650 Battery Backup</title>
-    <url>/2023/05/02/3S21P-18650-Battery-Backup/</url>
-    <content><![CDATA[<p>I am cleaning out my fridge :) and have had these 18650s in there for a while so I am using them to create a 12 volt power supply.</p>
-<p>This is a battery I will be using for a cellular signal amplifier and also used to charge my cell phone, laptop, and Lipos while out in the field - middle of nowhere. It is built from leftover 18650s from a 3.0 kWh build I did a few years ago so these have just been sitting in my fridge. Each averages ~1800 mAh so I should be able to produce 420 Wh from a full charge. I plan on charging with a 100 watt solar panel while out in the field.</p>
-<p>Long story short:<br>The positive from the protection board goes to the fuse then through the switch then to the positive ends of 12v socket, quick charge socket, the voltmeter, and the xt60 - all soldered together and head shrink wrapped. </p>
-<p>The negative side goes from the projection board to the negative ends of 12v socket, quick charge socket, the voltmeter, and the xt60. So the same with the positive but the fuse and switch aren&#39;t involved.</p>
-<p>The material links can be found on the Thingiverse&#x2F;YouTube links below.</p>
-<p>The STLs for the project <a href="https://www.thingiverse.com/thing:6003895">https://www.thingiverse.com/thing:6003895</a></p>
-<img src="/2023/05/02/3S21P-18650-Battery-Backup/1git.jpg" class="">
-<img src="/2023/05/02/3S21P-18650-Battery-Backup/2git.jpg" class="">
-<img src="/2023/05/02/3S21P-18650-Battery-Backup/3git.jpg" class="">
-
-<iframe width="360" height="240" src="https://www.youtube.com/embed/WIsmeS5GjXg" title="(no sound) Build Remote Power Source Laptop/Lipo/Phone Charger 3S21P 18650" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-]]></content>
-      <tags>
-        <tag>fusion360</tag>
-        <tag>18650s</tag>
-        <tag>3dmodeling</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Learn 3D Modeling for Drone Build</title>
-    <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
-    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. I&#39;ve used FDM printing to get roughly what I need but the time modeling spans hours and I don&#39;t feel like I&#39;m using Fusion 360 to its full potential.</p>
-<p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
-<p>The STLs for the project <a href="https://www.thingiverse.com/thing:5810830">https://www.thingiverse.com/thing:5810830</a></p>
-<p><u>Issues that cropped up during this project:</u><ol></p>
-<li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
-<li>The model is too large for a typical 3d printer to print so it had to be broken into several parts (see Fusion snip below)</li>
-<li>Nylon is not a very good material for drone frames. It flexes a lot and is heavy relative to strength. The frame flexing also makes it more difficult for the flight controller to assign thrust</li>
-<li>The component tray model could not fit two 4S LiPos so it was redesigned</li></ol>
-
-<img src="/2022/11/21/Learn-Drone-Building-and-3D-Modeling/fusion360model.jpg" class="">
-
-<p>It ended up flying. I think a voltage drop ended up crashing the flight controller making it unresponsive to remote control and the drone started drifting to the unknown. Luckily it hit a power line and I was able to recover it.<iframe width="480" height="240" src="https://www.youtube.com/embed/XV6d9KvX41s" title="Drone First Flight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-]]></content>
-      <tags>
-        <tag>fusion360</tag>
-        <tag>3dmodeling</tag>
-        <tag>coursera</tag>
-        <tag>lipos</tag>
-        <tag>drone</tag>
       </tags>
   </entry>
   <entry>
@@ -282,6 +187,106 @@ m
         <tag>heatmap</tag>
         <tag>folium</tag>
         <tag>pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Test Rebuild</title>
+    <url>/2025/10/26/Test-Rebuild/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Build Inkbird PID Kit from Amazon</title>
+    <url>/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/</url>
+    <content><![CDATA[<p>Purchased <a href="https://www.amazon.com/gp/product/B08Y8GX1WT">this Amazon kit</a> to control the temperature of a  1500 watt smoker. I&#39;ve tried other off the shelf controllers but the max temperature is too low and it&#39;s not easy to adjust the temperature.</p>
+<p>Here is a link to <a href="https://www.thingiverse.com/thing:5647742">the chassis model</a>.</p>
+<img src="/2022/11/21/Build-Inkbird-PID-Kit-from-Amazon/inside.jpg" class="">
+
+<iframe width="480" height="240" src="https://www.youtube.com/embed/m8Bwifxe91g" title="Amazon Inkbird PID Kit Model" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
+      <tags>
+        <tag>fusion360</tag>
+        <tag>sensors</tag>
+        <tag>pid</tag>
+        <tag>temperature</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Upgrade/Repair Ender 3</title>
+    <url>/2023/10/26/Upgrade-Repair-Ender-3/</url>
+    <content><![CDATA[<p>My 3D printer&#39;s power supply failed and made the mainboard unstable, started blowing breaker (I think false arc faults from EMI) so both needed to be replaced. Since I was taking the machine apart and making changes I decided to overhaul a few things.</p>
+<p><b><a href="https://www.thingiverse.com/thing:6283887">&gt;&gt;View Model&lt;&lt;</a></b></p>
+<p>Project Punch List:</p>
+<p><u>Essential:</u><ol></p>
+<li>Replaced mainboard and power supply</li>
+<li>Modelled a bigger chassis for new components and power supply</li>
+<li>Grounded main frame, X axis & gantry, and heatbed</li>
+<li>Replaced poorly designed dual extruder - the steel teeth dug into the aluminum frame(looked like it could fail soon)</li></ol>
+
+<p><u>Upgrades:</u><ol></p>
+<li>Installed Dual Z axis and switched to 2mm pitch threaded rods</li>
+<li>Installed power metering module - measures voltage/frequency/current/wattage and total kWh</li>
+<li>Installed new all metal hotend that allows >300C rated thermocouple so eventually printing carbon fiber nylon and other high temp filaments</li>
+<li>Installed higher wattage hotend heating cartridge</li>
+<li>Installed 24 volt cable to supply power to filament dryer</li></ol>
+
+
+<p><u>Bottlenecks:</u><br><br>Some problems came up with dual Z axis and thread pitch change.</p>
+<ol><li>Adjusting for the new thread pitch was easy - just increased the steps to 1600steps/mm and print and measure calibration cube then adjusted based on findings</li>
+    <li>Had issues with binding/grinding/squealing from the threaded rods binding up in their mounts which was resolved with the following (order of importance)</li>
+<ol>
+    <li>Increased the Z motor amperage from the default to ~1 amp - this was the first thing I figured which restored my hope in the project. This increased binding but fixed the issue with only one Z stepper turning and the other partially</li>
+    <li>Loosened the bolts holding threaded nut to the X axis which allowed the threaded rod some up/down play on the y axis. Largely eliminated binding</li>
+    <li>Lots of dry lube. Decreased squealing</li>
+    <li>Installed flexible shaft couplings to the rods. Decreased the chance of binding</li>
+</ol></ol>
+When replacing the heating cartridge with a higher wattage I ran PID tuning then reconfigured with those results.
+
+
+<p>The modeling took about 6 hours to do but I procrastinated. Once I moved from having a 2D sketch to having a 3D outline of the bottom I knocked out the rest of the project of the next couple of weeks - modeling and test printing.</p>
+<p>Both the Dual Z and the slower pitch threaded rod greatly improved my tall prints. I think this is mostly because of the increased Z precision from the 1600 steps per mm from the 400 I had previously.</p>
+<table>
+<thead>
+<tr>
+<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/side.jpg" class=""></th>
+<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/grounding.jpg" class=""></th>
+<th><img src="/2023/10/26/Upgrade-Repair-Ender-3/side2.jpg" class=""></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/top.jpg" class=""></td>
+<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/secondZ.jpg" class=""></td>
+<td><img src="/2023/10/26/Upgrade-Repair-Ender-3/back.jpg" class=""></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>fusion360</tag>
+        <tag>3dmodeling</tag>
+        <tag>ender3</tag>
+        <tag>3dprinting</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Learn 3D Modeling for Drone Build</title>
+    <url>/2022/11/21/Learn-Drone-Building-and-3D-Modeling/</url>
+    <content><![CDATA[<p>A few of my projects have been held back because the cost of a chassis would double the project cost and there aren&#39;t dependable&#x2F;customizable solutions for small and quick electronics projects that need a case. I&#39;ve used FDM printing to get roughly what I need but the time modeling spans hours and I don&#39;t feel like I&#39;m using Fusion 360 to its full potential.</p>
+<p>I decided to take <a href="https://www.coursera.org/specializations/cad-design-digital-manufacturing">CAD and Digital Manufacturing on Coursera</a>. The specialization deals with building a drone frame for Nylon printing.</p>
+<p>The STLs for the project <a href="https://www.thingiverse.com/thing:5810830">https://www.thingiverse.com/thing:5810830</a></p>
+<p><u>Issues that cropped up during this project:</u><ol></p>
+<li>The course looks to be from around 2018. FPV quadcopters have come a long way so sourcing parts was difficult for a novice. I ended up with parts with poor documentation</li>
+<li>The model is too large for a typical 3d printer to print so it had to be broken into several parts (see Fusion snip below)</li>
+<li>Nylon is not a very good material for drone frames. It flexes a lot and is heavy relative to strength. The frame flexing also makes it more difficult for the flight controller to assign thrust</li>
+<li>The component tray model could not fit two 4S LiPos so it was redesigned</li></ol>
+
+<img src="/2022/11/21/Learn-Drone-Building-and-3D-Modeling/fusion360model.jpg" class="">
+
+<p>It ended up flying. I think a voltage drop ended up crashing the flight controller making it unresponsive to remote control and the drone started drifting to the unknown. Luckily it hit a power line and I was able to recover it.<iframe width="480" height="240" src="https://www.youtube.com/embed/XV6d9KvX41s" title="Drone First Flight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+]]></content>
+      <tags>
+        <tag>fusion360</tag>
+        <tag>3dmodeling</tag>
+        <tag>coursera</tag>
+        <tag>lipos</tag>
+        <tag>drone</tag>
       </tags>
   </entry>
 </search>
